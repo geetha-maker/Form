@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Form Demo</title>
+        <script>
+            function validateData(){
+                var name=document.getElementById("name").value;
+                var email=document.getElementById("email").value;
+                if ((name=="")||(email=="")){
+			window.alert("Please enter all the fields");
+			return false;
+                }
+		else if (email.match("@gmail.com")!="@gmail.com"){
+			window.alert("invalid email ID");
+			return false;
+		}
+	}
+        </script>
+    </head>
+    <body>
+        <form action="validate.html" onsubmit="return validateData()">
+            <label>Name: </label>
+            <input type="text" id="name" /><br/>
+            <label>Email ID: </label>
+            <input type="text" id="email"/><br/>
+            <button type="submit" value="submit">Sub</button>
+        </form>
+    </body>
+</html>
